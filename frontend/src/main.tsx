@@ -1,15 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
+import MainNavBar from "./Components/MainNavBar/MainNavBar";
 import "./index.css";
-import router from "./Router/Router";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./Router/Router";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <>
+  <BrowserRouter>
     <Header />
-    <RouterProvider router={router} />
+    <MainNavBar />
+    <Router />
     <Footer />
-  </>
+  </BrowserRouter>
 );
