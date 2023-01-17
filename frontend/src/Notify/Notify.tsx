@@ -64,8 +64,8 @@ const Container = styled.div<{ theme: string }>`
 const CloseButton = styled.p`
   position: absolute;
   cursor: pointer;
-  top: -10px;
-  right: 10px;
+  top: 0px;
+  right: 5px;
   width: 20px;
   height: 20px;
 `;
