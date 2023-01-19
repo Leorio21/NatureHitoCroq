@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Title from "../../Components/Title/Title";
 import hito from "../../assets/hito.jpg";
+import { devices } from "../../Styles/devices";
 
 const AboutUs = (): React.ReactElement => {
   return (
@@ -48,7 +49,7 @@ const AboutUs = (): React.ReactElement => {
         des stands dans votre club canin ou pendant un concours cela sera avec
         plaisir de pouvoir vous rencontrer.
       </Paragraph>
-      <div className="row justify-content-evenly">
+      <WordContainer>
         <WordDefinition>
           <Title
             level="h3"
@@ -89,7 +90,7 @@ const AboutUs = (): React.ReactElement => {
             chaque moment.
           </Paragraph>
         </WordDefinition>
-      </div>
+      </WordContainer>
       <Img src={hito} alt={"photo d'hito"} />
     </Container>
   );
@@ -110,6 +111,7 @@ const Paragraph = styled.p`
 
 const Img = styled.img`
   width: 100%;
+  max-width: 800px;
   margin: 0px auto;
   object-fit: cover;
 `;
@@ -123,4 +125,12 @@ const WordDefinition = styled.div`
   background-color: var(--primary-shadow-color);
   border-radius: 10px;
   font-family: "Times New Roman", Times, serif;
+`;
+
+const WordContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media ${devices.desktop} {
+    flex-direction: row;
+  }
 `;
