@@ -6,7 +6,7 @@ import Title from "../Title/Title";
 const Header = (): React.ReactElement => {
   return (
     <HeaderContainer>
-      <Title />
+      <Title title="NATURE HITO CROQ" />
       <Logo width={120} />
     </HeaderContainer>
   );

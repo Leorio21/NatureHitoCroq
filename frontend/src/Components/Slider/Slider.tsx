@@ -90,7 +90,7 @@ const Title = styled.h2`
   top: 0px;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  text-shadow: 0px 0px 5px rgb(0, 81, 16);
+  text-shadow: 0px 0px 5px var(--primary-text-color);
 `;
 
 const SlideButton = styled.div`

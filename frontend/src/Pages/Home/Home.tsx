@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { devices } from "../../Styles/devices";
 import Slider from "../../Components/Slider/Slider";
-import boutique from "./boutique.jpg";
+import boutique from "../../assets/boutique.jpg";
 
 const Home = (): React.ReactElement => {
   return (

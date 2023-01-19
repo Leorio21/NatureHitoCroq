@@ -19,6 +19,8 @@ export default MainNavBar;
 
 const NavBar = styled.nav`
   width: 100%;
+  padding: 10px;
+  border-bottom: 3px solid var(--primary-text-color);
   @media ${devices.tablette} {
     display: flex;
     justify-content: space-evenly;
