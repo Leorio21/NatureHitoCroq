@@ -3,10 +3,15 @@ import styled from "styled-components";
 import Title from "../../Components/Title/Title";
 import hito from "../../assets/hito.jpg";
 import { devices } from "../../Styles/devices";
+import Footer from "../../Components/Footer/Footer";
+import Header from "../../Components/Header/Header";
+import MainNavBar from "../../Components/MainNavBar/MainNavBar";
 
 const AboutUs = (): React.ReactElement => {
   return (
     <Container>
+      <Header />
+      <MainNavBar />
       <Title level="h2" padding={10} title="Qui sommes-nous ?" />
       <Img src={hito} alt={"photo d'hito"} />
       <Paragraph>
@@ -92,6 +97,7 @@ const AboutUs = (): React.ReactElement => {
         </WordDefinition>
       </WordContainer>
       <Img src={hito} alt={"photo d'hito"} />
+      <Footer />
     </Container>
   );
 };

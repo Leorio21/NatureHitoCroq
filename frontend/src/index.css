@@ -21,6 +21,7 @@
   --primary-text-color: #27990f;
   --primary-shadow-color: #27990fcc;
   --dark-text-color: #FFFFFF;
+  --dark-bg-color: #242424;
 
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -29,7 +30,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--dark-bg-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

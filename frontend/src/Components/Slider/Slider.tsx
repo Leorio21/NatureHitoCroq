@@ -76,9 +76,9 @@ const Container = styled.div`
   min-height: 240px;
   @media ${devices.tablette} {
     height: 300px;
-  }
-  &:hover .navigation {
-    visibility: visible;
+    &:hover .navigation {
+      visibility: visible;
+    }
   }
 `;
 
@@ -104,8 +104,10 @@ const SlideButton = styled.div`
   max-width: 80px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  &.navigation {
-    visibility: hidden;
+  @media ${devices.desktop} {
+    &.navigation {
+      visibility: hidden;
+    }
   }
 `;
 

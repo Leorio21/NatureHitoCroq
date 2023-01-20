@@ -3,10 +3,15 @@ import styled from "styled-components";
 import { devices } from "../../Styles/devices";
 import Slider from "../../Components/Slider/Slider";
 import boutique from "../../assets/boutique.jpg";
+import Header from "../../Components/Header/Header";
+import Footer from "../../Components/Footer/Footer";
+import MainNavBar from "../../Components/MainNavBar/MainNavBar";
 
 const Home = (): React.ReactElement => {
   return (
     <Container>
+      <Header />
+      <MainNavBar />
       <Slider />
       <LocalisationContainer>
         <Img src={boutique} />
@@ -18,6 +23,7 @@ const Home = (): React.ReactElement => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </LocalisationContainer>
+      <Footer />
     </Container>
   );
 };
