@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 interface TitleProps {
-  level?: string;
+  level?: React.ElementType;
   size?: number;
   padding?: number;
   title: string;

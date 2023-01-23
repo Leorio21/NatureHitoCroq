@@ -10,7 +10,7 @@ interface NotifyProps {
   setNotify: (notifyContent: string) => void;
 }
 
-export const Notify = ({
+const Notify = ({
   theme,
   content,
   setNotify,
@@ -28,6 +28,8 @@ export const Notify = ({
     </Container>
   );
 };
+
+export default Notify;
 
 const Container = styled.div<{ theme: string }>`
   position: absolute;

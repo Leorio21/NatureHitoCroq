@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { devices } from "../../Styles/devices";
 import events from "../../Pages/Events/Events.json";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
+import { useModal } from "../../Modal/useModal";
+import Card from "../Card/Card";
 
 const slideReducer = (
   state: number,
@@ -22,6 +24,7 @@ const slideReducer = (
 
 const Slider = (): React.ReactElement => {
   const [currentSlide, dispatch] = useReducer(slideReducer, 0);
+  const { setModal, ModalContainer } = useModal();
 
   const previousHandler = (): void => {
     dispatch({ type: "previous", max: events.length - 1 });
@@ -29,6 +32,10 @@ const Slider = (): React.ReactElement => {
 
   const nextHandler = (): void => {
     dispatch({ type: "next", max: events.length - 1 });
+  };
+
+  const detailsHandler = (): void => {
+    setModal(<Card event={events[currentSlide]} />);
   };
 
   useEffect(() => {
@@ -52,11 +59,12 @@ const Slider = (): React.ReactElement => {
         {events[currentSlide].startDate +
           " - " +
           events[currentSlide].type +
-          (events[currentSlide].lieu !== ""
-            ? " - " + events[currentSlide].lieu
+          (events[currentSlide].location !== ""
+            ? " - ".concat(events[currentSlide].location)
             : "")}
       </Title>
-      <Img src={events[currentSlide].illustration} />
+      <Img src={events[currentSlide].illustration} onClick={detailsHandler} />
+      <ModalContainer />
     </Container>
   );
 };

@@ -4,7 +4,8 @@
     "type": "Agility",
     "startDate": "12/01/2023",
     "endDate": "12/01/2023",
-    "lieu": "Darois",
+    "location": "Darois",
+    "info": "",
     "illustration": "./agility.jpg",
     "Lien": ""
   },
@@ -13,7 +14,8 @@
     "type": "Chien de berger",
     "startDate": "24/01/2023",
     "endDate": "24/01/2023",
-    "lieu": "Beaune",
+    "location": "Beaune",
+    "info": "",
     "illustration": "./chien_berger.jpeg",
     "Lien": ""
   },
@@ -22,7 +24,8 @@
     "type": "Agility",
     "startDate": "15/03/2023",
     "endDate": "16/03/2023",
-    "lieu": "Is sur Tille",
+    "location": "Is sur Tille",
+    "info": "",
     "illustration": "./agility.jpg",
     "Lien": ""
   },
@@ -31,7 +34,8 @@
     "type": "Soldes",
     "startDate": "12/02/2023",
     "endDate": "17/02/2023",
-    "lieu": "",
+    "location": "",
+    "info": "",
     "illustration": "./soldes.jpg",
     "Lien": ""
   }

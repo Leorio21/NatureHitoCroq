@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Bars3Icon } from "@heroicons/react/20/solid";
 import { devices } from "../../Styles/devices";
-import classNames from "classnames";
+import classNames from "classNames";
 import styled from "styled-components";
 
 const MainNavBar = (): React.ReactElement => {
@@ -33,6 +33,9 @@ const MainNavBar = (): React.ReactElement => {
         <Link to="/contactUs" className="link">
           Contact
         </Link>
+        {/* <Link to="/test" className="link">
+          Test
+        </Link> */}
       </NavBar>
     </Container>
   );
@@ -77,7 +80,7 @@ const NavBar = styled.nav`
   width: 100%;
   padding: 10px;
   height: 100vh;
-  background-color: var(--dark-bg-color);
+  background-color: var(--dark-color);
   transition: all 0.3s ease-in-out;
   &.visible {
     left: 0px;

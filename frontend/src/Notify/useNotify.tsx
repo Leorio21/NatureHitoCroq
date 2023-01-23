@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import { Notify } from "./Notify";
+import Notify from "./Notify";
 
 interface NotifyProps {
   color?: "success" | "error" | "warning";
