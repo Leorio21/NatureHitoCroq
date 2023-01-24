@@ -1,10 +1,14 @@
 import React, { useEffect, useReducer } from "react";
 import styled from "styled-components";
 import { devices } from "../../Styles/devices";
-import events from "../../Pages/Events/Events.json";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { useModal } from "../../Modal/useModal";
 import Card from "../Card/Card";
+import { EventInterface } from "../../Interfaces/Interfaces";
+
+interface SliderProps {
+  events: EventInterface[];
+}
 
 const slideReducer = (
   state: number,
@@ -22,7 +26,7 @@ const slideReducer = (
   }
 };
 
-const Slider = (): React.ReactElement => {
+const Slider = ({ events }: SliderProps): React.ReactElement => {
   const [currentSlide, dispatch] = useReducer(slideReducer, 0);
   const { setModal, ModalContainer } = useModal();
 
@@ -49,22 +53,34 @@ const Slider = (): React.ReactElement => {
 
   return (
     <Container>
-      <Previous onClick={previousHandler} className="navigation">
-        <ChevronLeftIcon />
-      </Previous>
-      <Next onClick={nextHandler} className="navigation">
-        <ChevronRightIcon />
-      </Next>
-      <Title>
-        {events[currentSlide].startDate +
-          " - " +
-          events[currentSlide].type +
-          (events[currentSlide].location !== ""
-            ? " - ".concat(events[currentSlide].location)
-            : "")}
-      </Title>
-      <Img src={events[currentSlide].illustration} onClick={detailsHandler} />
-      <ModalContainer />
+      {events.length === 0 ? (
+        <>
+          <Title>Aucun évènements pour le moment</Title>
+          <Img src="./hito.jpg" />
+        </>
+      ) : (
+        <>
+          <Previous onClick={previousHandler} className="navigation">
+            <ChevronLeftIcon />
+          </Previous>
+          <Next onClick={nextHandler} className="navigation">
+            <ChevronRightIcon />
+          </Next>
+          <Title>
+            {events[currentSlide].startDate +
+              " - " +
+              events[currentSlide].type +
+              (events[currentSlide].location !== ""
+                ? " - ".concat(events[currentSlide].location)
+                : "")}
+          </Title>
+          <Img
+            src={events[currentSlide].illustration}
+            onClick={detailsHandler}
+          />
+          <ModalContainer />
+        </>
+      )}
     </Container>
   );
 };

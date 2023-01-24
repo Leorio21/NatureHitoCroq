@@ -1,18 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { EventInterface } from "../../Interfaces/Interfaces";
 import Title from "../Title/Title";
 
 interface CardProps {
-  event: {
-    id: number;
-    type: string;
-    startDate: string;
-    endDate: string;
-    info: string;
-    location: string;
-    illustration: string;
-    Lien: string;
-  };
+  event: EventInterface;
 }
 
 const Card = ({ event }: CardProps): React.ReactElement => {

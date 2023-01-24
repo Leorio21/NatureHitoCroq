@@ -1,24 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Card from "../../Components/Card/Card";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import MainNavBar from "../../Components/MainNavBar/MainNavBar";
-import events from "./Events.json";
+import Title from "../../Components/Title/Title";
+import { useFetch } from "../../Fetch/useFetch";
+import { EventInterface } from "../../Interfaces/Interfaces";
+import { useModal } from "../../Modal/useModal";
 
 const Events = (): React.ReactElement => {
+  const { response, error, isLoading } =
+    useFetch<EventInterface[]>("Events.json");
+  const { setModal, ModalContainer } = useModal();
+
+  useEffect(() => {
+    if (error !== "") {
+      setModal("Une erreur est survenue : " + error);
+    }
+  }, []);
   return (
     <>
       <Header />
       <MainNavBar />
       <Container>
         <EventsContainer>
-          {events.map((event, index) => {
-            return <Card key={index} event={event} />;
-          })}
+          {isLoading && "Chargement"}
+          {response?.length === 0 ? (
+            <Title level="h2" title="Aucun évènements pour le moment" />
+          ) : (
+            response?.map((event, index) => {
+              return <Card key={index} event={event} />;
+            })
+          )}
         </EventsContainer>
       </Container>
       <Footer />
+      <ModalContainer />
     </>
   );
 };

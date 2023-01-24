@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { devices } from "../../Styles/devices";
 import Slider from "../../Components/Slider/Slider";
@@ -6,14 +6,28 @@ import boutique from "../../assets/boutique.jpg";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import MainNavBar from "../../Components/MainNavBar/MainNavBar";
+import { useFetch } from "../../Fetch/useFetch";
+import { useModal } from "../../Modal/useModal";
+import { EventInterface } from "../../Interfaces/Interfaces";
 
 const Home = (): React.ReactElement => {
+  const { response, error, isLoading } =
+    useFetch<EventInterface[]>("Events.json");
+  const { setModal, ModalContainer } = useModal();
+
+  useEffect(() => {
+    if (error !== "") {
+      setModal("Une erreur est survenue : " + error);
+    }
+  }, [error]);
+
   return (
     <>
       <Header />
       <MainNavBar />
       <Container>
-        <Slider />
+        {isLoading && "Chargement"}
+        {response !== undefined && <Slider events={response} />}
         <LocalisationContainer>
           <Img src={boutique} />
           <iframe
@@ -26,6 +40,7 @@ const Home = (): React.ReactElement => {
         </LocalisationContainer>
       </Container>
       <Footer />
+      <ModalContainer />
     </>
   );
 };
