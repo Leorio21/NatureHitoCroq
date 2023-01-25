@@ -3,7 +3,7 @@ import styled from "styled-components";
 import construction from "../../assets/construction.png";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
-import MainNavBar from "../../Components/MainNavBar/MainNavBar";
+import MainNavBar from "../../Components/NavBar/MainNavBar";
 
 const Construction = (): React.ReactElement => {
   return (

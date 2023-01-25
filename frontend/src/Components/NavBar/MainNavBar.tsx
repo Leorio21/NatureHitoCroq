@@ -33,9 +33,6 @@ const MainNavBar = (): React.ReactElement => {
         <Link to="/contactUs" className="link">
           Contact
         </Link>
-        {/* <Link to="/test" className="link">
-          Test
-        </Link> */}
       </NavBar>
     </Container>
   );
@@ -52,6 +49,8 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   & .button_menu {
+    position: absolute;
+    top: -40px;
     background-color: black;
     z-index: 1;
     margin: 10px;

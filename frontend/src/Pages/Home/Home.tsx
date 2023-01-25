@@ -5,9 +5,9 @@ import Slider from "../../Components/Slider/Slider";
 import boutique from "../../assets/boutique.jpg";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
-import MainNavBar from "../../Components/MainNavBar/MainNavBar";
-import { useFetch } from "../../Fetch/useFetch";
-import { useModal } from "../../Modal/useModal";
+import MainNavBar from "../../Components/NavBar/MainNavBar";
+import { useFetch } from "../../Hooks/Fetch/useFetch";
+import { useModal } from "../../Hooks/Modal/useModal";
 import { EventInterface } from "../../Interfaces/Interfaces";
 
 const Home = (): React.ReactElement => {
@@ -17,7 +17,7 @@ const Home = (): React.ReactElement => {
 
   useEffect(() => {
     if (error !== "") {
-      setModal("Une erreur est survenue : " + error);
+      setModal(`Une erreur est survenue : ${error}`);
     }
   }, [error]);
 

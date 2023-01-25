@@ -7,7 +7,7 @@ interface CardProps {
   event: EventInterface;
 }
 
-const Card = ({ event }: CardProps): React.ReactElement => {
+const EventCard = ({ event }: CardProps): React.ReactElement => {
   return (
     <Container>
       <Title level={"h2"} title={event.startDate} />
@@ -28,7 +28,7 @@ const Card = ({ event }: CardProps): React.ReactElement => {
   );
 };
 
-export default Card;
+export default EventCard;
 
 const Container = styled.div`
   max-width: 400px;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import MainNavBar from "../../Components/MainNavBar/MainNavBar";
-import { useModal } from "../../Modal/useModal";
+import MainNavBar from "../../Components/NavBar/MainNavBar";
+import { useModal } from "../../Hooks/Modal/useModal";
 
 const Test = (): React.ReactElement => {
   const { setModal, ModalContainer } = useModal();

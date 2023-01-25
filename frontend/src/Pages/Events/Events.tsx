@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Card from "../../Components/Card/Card";
+import EventCard from "../../Components/Card/EventCard";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
-import MainNavBar from "../../Components/MainNavBar/MainNavBar";
+import MainNavBar from "../../Components/NavBar/MainNavBar";
 import Title from "../../Components/Title/Title";
-import { useFetch } from "../../Fetch/useFetch";
+import { useFetch } from "../../Hooks/Fetch/useFetch";
 import { EventInterface } from "../../Interfaces/Interfaces";
-import { useModal } from "../../Modal/useModal";
+import { useModal } from "../../Hooks/Modal/useModal";
 
 const Events = (): React.ReactElement => {
   const { response, error, isLoading } =
@@ -16,7 +16,7 @@ const Events = (): React.ReactElement => {
 
   useEffect(() => {
     if (error !== "") {
-      setModal("Une erreur est survenue : " + error);
+      setModal(`Une erreur est survenue : ${error}`);
     }
   }, []);
   return (
@@ -30,7 +30,7 @@ const Events = (): React.ReactElement => {
             <Title level="h2" title="Aucun évènements pour le moment" />
           ) : (
             response?.map((event, index) => {
-              return <Card key={index} event={event} />;
+              return <EventCard key={index} event={event} />;
             })
           )}
         </EventsContainer>

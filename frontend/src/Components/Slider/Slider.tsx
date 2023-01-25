@@ -2,8 +2,8 @@ import React, { useEffect, useReducer } from "react";
 import styled from "styled-components";
 import { devices } from "../../Styles/devices";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
-import { useModal } from "../../Modal/useModal";
-import Card from "../Card/Card";
+import { useModal } from "../../Hooks/Modal/useModal";
+import EventCard from "../Card/EventCard";
 import { EventInterface } from "../../Interfaces/Interfaces";
 
 interface SliderProps {
@@ -39,7 +39,7 @@ const Slider = ({ events }: SliderProps): React.ReactElement => {
   };
 
   const detailsHandler = (): void => {
-    setModal(<Card event={events[currentSlide]} />);
+    setModal(<EventCard event={events[currentSlide]} />);
   };
 
   useEffect(() => {

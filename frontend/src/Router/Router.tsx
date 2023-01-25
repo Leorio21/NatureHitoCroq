@@ -5,6 +5,7 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
 import Construction from "../Pages/Construction/Construction";
 import Test from "../Pages/Test/Test";
 import Events from "../Pages/Events/Events";
+import Products from "../Pages/Products/Products";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,25 @@ const router = createBrowserRouter([
   },
   {
     path: "/products",
-    element: <Construction />,
+    element: <Products />,
+    children: [
+      {
+        path: "/products/food",
+        element: <Construction />,
+      },
+      {
+        path: "sweetmeat",
+        element: <Construction />,
+      },
+      {
+        path: "care",
+        element: <Construction />,
+      },
+      {
+        path: "toys",
+        element: <Construction />,
+      },
+    ],
   },
   {
     path: "/events",

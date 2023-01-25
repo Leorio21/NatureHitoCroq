@@ -5,7 +5,7 @@ import hito from "../../assets/hito.jpg";
 import { devices } from "../../Styles/devices";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
-import MainNavBar from "../../Components/MainNavBar/MainNavBar";
+import MainNavBar from "../../Components/NavBar/MainNavBar";
 
 const AboutUs = (): React.ReactElement => {
   return (
