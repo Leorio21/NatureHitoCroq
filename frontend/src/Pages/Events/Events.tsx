@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import EventCard from "../../Components/Card/EventCard";
+import Card from "../../Components/Card/Card";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import MainNavBar from "../../Components/NavBar/MainNavBar";
@@ -8,6 +8,7 @@ import Title from "../../Components/Title/Title";
 import { useFetch } from "../../Hooks/Fetch/useFetch";
 import { EventInterface } from "../../Interfaces/Interfaces";
 import { useModal } from "../../Hooks/Modal/useModal";
+import Event from "../../Components/Event/Event";
 
 const Events = (): React.ReactElement => {
   const { response, error, isLoading } =
@@ -27,10 +28,14 @@ const Events = (): React.ReactElement => {
         <EventsContainer>
           {isLoading && "Chargement"}
           {response?.length === 0 ? (
-            <Title level="h2" title="Aucun évènements pour le moment" />
+            <Title level="h2" title="Aucun événements pour le moment" />
           ) : (
             response?.map((event, index) => {
-              return <EventCard key={index} event={event} />;
+              return (
+                <Card key={index}>
+                  <Event event={event} />
+                </Card>
+              );
             })
           )}
         </EventsContainer>

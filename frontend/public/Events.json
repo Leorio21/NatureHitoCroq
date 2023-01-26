@@ -1,3 +1,32 @@
 [
-  
+  {
+    "id": 1,
+    "type": "Chien de berger",
+    "startDate": "24/01/2023",
+    "endDate": "24/01/2023",
+    "location": "Beaune",
+    "info": "",
+    "illustration": "./chien_berger.jpeg",
+    "Lien": ""
+  },
+  {
+    "id": 2,
+    "type": "Agility",
+    "startDate": "15/03/2023",
+    "endDate": "16/03/2023",
+    "location": "Is sur Tille",
+    "info": "",
+    "illustration": "./agility.jpg",
+    "Lien": ""
+  },
+  {
+    "id": 3,
+    "type": "Soldes",
+    "startDate": "12/02/2023",
+    "endDate": "17/02/2023",
+    "location": "",
+    "info": "",
+    "illustration": "./soldes.jpg",
+    "Lien": ""
+  }
 ]

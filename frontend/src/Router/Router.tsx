@@ -6,6 +6,7 @@ import Construction from "../Pages/Construction/Construction";
 import Test from "../Pages/Test/Test";
 import Events from "../Pages/Events/Events";
 import Products from "../Pages/Products/Products";
+import construction from "../assets/construction.png";
 
 const router = createBrowserRouter([
   {
@@ -21,20 +22,20 @@ const router = createBrowserRouter([
     element: <Products />,
     children: [
       {
-        path: "/products/food",
-        element: <Construction />,
+        path: "food",
+        element: <img src={construction} alt="Page en construction" />,
       },
       {
         path: "sweetmeat",
-        element: <Construction />,
+        element: <img src={construction} alt="Page en construction" />,
       },
       {
         path: "care",
-        element: <Construction />,
+        element: <img src={construction} alt="Page en construction" />,
       },
       {
         path: "toys",
-        element: <Construction />,
+        element: <img src={construction} alt="Page en construction" />,
       },
     ],
   },

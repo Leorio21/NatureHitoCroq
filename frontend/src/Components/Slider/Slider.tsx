@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { devices } from "../../Styles/devices";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { useModal } from "../../Hooks/Modal/useModal";
-import EventCard from "../Card/EventCard";
+import Event from "../Event/Event";
 import { EventInterface } from "../../Interfaces/Interfaces";
 
 interface SliderProps {
@@ -39,7 +39,7 @@ const Slider = ({ events }: SliderProps): React.ReactElement => {
   };
 
   const detailsHandler = (): void => {
-    setModal(<EventCard event={events[currentSlide]} />);
+    setModal(<Event event={events[currentSlide]} />);
   };
 
   useEffect(() => {

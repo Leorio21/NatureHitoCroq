@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { EventInterface } from "../../Interfaces/Interfaces";
 import Title from "../Title/Title";
 
-interface CardProps {
+interface EventProps {
   event: EventInterface;
 }
 
-const EventCard = ({ event }: CardProps): React.ReactElement => {
+const Event = ({ event }: EventProps): React.ReactElement => {
   return (
-    <Container>
+    <>
       <Title level={"h2"} title={event.startDate} />
       <Figure>
         <Img src={event.illustration} />
@@ -24,20 +24,11 @@ const EventCard = ({ event }: CardProps): React.ReactElement => {
         )}
         <Info>Détail : {event.info}</Info>
       </EventInfos>
-    </Container>
+    </>
   );
 };
 
-export default EventCard;
-
-const Container = styled.div`
-  max-width: 400px;
-  padding: 10px;
-  width: 100%;
-  border: 2px solid var(--primary-text-color);
-  border-radius: 15px;
-  margin: auto;
-`;
+export default Event;
 
 const Figure = styled.figure`
   display: flex;

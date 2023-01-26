@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Bars3Icon } from "@heroicons/react/20/solid";
 import { devices } from "../../Styles/devices";
 import classNames from "classNames";
@@ -18,21 +18,21 @@ const MainNavBar = (): React.ReactElement => {
     <Container>
       <Bars3Icon className="button_menu" onClick={onMenuIconClickHandler} />
       <NavBar className={classNames({ visible: menuIsVisible })}>
-        <Link to="/" className="link">
+        <NavLink to="/" className="link">
           Accueil
-        </Link>
-        <Link to="/aboutUs" className="link">
+        </NavLink>
+        <NavLink to="/aboutUs" className="link">
           Qui sommes-nous?
-        </Link>
-        <Link to="/products" className="link">
+        </NavLink>
+        <NavLink to="/products" className="link">
           Nos Produits
-        </Link>
-        <Link to="/events" className="link">
-          Evènements
-        </Link>
-        <Link to="/contactUs" className="link">
+        </NavLink>
+        <NavLink to="/events" className="link">
+          Evénements
+        </NavLink>
+        <NavLink to="/contactUs" className="link">
           Contact
-        </Link>
+        </NavLink>
       </NavBar>
     </Container>
   );
@@ -84,9 +84,13 @@ const NavBar = styled.nav`
   &.visible {
     left: 0px;
   }
+  & .active {
+    border: 1.5px solid var(--light-color);
+    border-radius: 15px;
+    background-color: #000000;
+  }
   & .link {
     color: var(--primary-text-color);
-    border-bottom: 1px solid var(--primary-text-color);
     text-decoration: none;
     text-align: center;
     font-family: "stencilregular";
@@ -103,7 +107,6 @@ const NavBar = styled.nav`
     justify-content: space-evenly;
     flex-direction: row;
     & .link {
-      border-bottom: none;
       width: max-content;
     }
   }
