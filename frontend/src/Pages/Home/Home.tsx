@@ -27,7 +27,18 @@ const Home = (): React.ReactElement => {
       <MainNavBar />
       <Container>
         {isLoading && "Chargement"}
-        {response !== undefined && <Slider events={response} />}
+        {response !== undefined && (
+          <Slider
+            events={response.sort((a, b) => {
+              const dateA = a.startDate.split("-");
+              const dateB = b.startDate.split("-");
+              return Date.parse(dateA[1] + "-" + dateA[0] + "-" + dateA[2]) >
+                Date.parse(dateB[1] + "-" + dateB[0] + "-" + dateB[2])
+                ? 1
+                : -1;
+            })}
+          />
+        )}
         <LocalisationContainer>
           <Img src={boutique} />
           <iframe

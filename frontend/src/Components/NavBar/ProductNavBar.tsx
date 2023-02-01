@@ -19,6 +19,9 @@ const ProductNavBar = (): React.ReactElement => {
         <NavLink to="toys" className="link">
           Jouets
         </NavLink>
+        <NavLink to="accessories" className="link">
+          Accessoires
+        </NavLink>
       </NavBar>
     </Container>
   );

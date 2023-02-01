@@ -2,6 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { EventInterface } from "../../Interfaces/Interfaces";
 import Title from "../Title/Title";
+import dayjs from "dayjs";
+import "dayjs/locale/fr";
+import "dayjs/plugin/customParseFormat";
+import Figure from "../Figure/Figure";
+
+dayjs.locale("fr");
+dayjs().format("DD-MM-YYYY");
 
 interface EventProps {
   event: EventInterface;
@@ -10,44 +17,25 @@ interface EventProps {
 const Event = ({ event }: EventProps): React.ReactElement => {
   return (
     <>
-      <Title level={"h2"} title={event.startDate} />
-      <Figure>
-        <Img src={event.illustration} />
-        <Figcaption>{event.type}</Figcaption>
-      </Figure>
+      <Title level={"h2"} title={dayjs(event.startDate).format("DD-MM-YYYY")} />
+      <Figure illustration={event.illustration} title={event.title} />
       <EventInfos>
         <Info>
-          Du {event.startDate} au {event.endDate}
+          Du {dayjs(event.startDate).format("DD-MM-YYYY")} au{" "}
+          {dayjs(event.endDate).format("DD-MM-YYYY")}
         </Info>
         {event.location !== "" && event.location !== undefined && (
           <Info>Lieu : {event.location}</Info>
         )}
-        <Info>Détail : {event.info}</Info>
+        {event.info !== "" && event.location !== undefined && (
+          <Info>Détail : {event.info}</Info>
+        )}
       </EventInfos>
     </>
   );
 };
 
 export default Event;
-
-const Figure = styled.figure`
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  height: 200px;
-  margin: 10px 0px;
-`;
-
-const Img = styled.img`
-  height: 100%;
-  width: auto;
-  object-fit: cover;
-`;
-
-const Figcaption = styled.figcaption`
-  text-align: center;
-  background-color: #000000;
-`;
 
 const EventInfos = styled.div`
   width: 100%;

@@ -61,7 +61,7 @@ const AboutUs = (): React.ReactElement => {
               level="h3"
               size={20}
               title="NATURE"
-              color="var(--dark-text-color)"
+              color="var(--light-color)"
             />
             <Paragraph>
               Effectivement nous recherchons le plus sain possible pour nos
@@ -74,7 +74,7 @@ const AboutUs = (): React.ReactElement => {
               level="h3"
               size={20}
               title="HITO"
-              color="var(--dark-text-color)"
+              color="var(--light-color)"
             />
             <Paragraph>
               C&apos;est le prénom de mon chien et c&apos;est un clin d&apos;œil
@@ -88,7 +88,7 @@ const AboutUs = (): React.ReactElement => {
               level="h3"
               size={20}
               title="CROQ"
-              color="var(--dark-text-color)"
+              color="var(--light-color)"
             />
             <Paragraph>
               Ce mot a plusieurs significations croque comme l&apos;alimentation
@@ -131,8 +131,9 @@ const WordDefinition = styled.div`
   flex-direction: column;
   padding: 10px;
   margin: 10px;
+  color: var(--light-color);
   text-align: justify;
-  background-color: var(--primary-shadow-color);
+  background-color: var(--primary-text-color);
   border-radius: 10px;
   font-family: "Times New Roman", Times, serif;
 `;

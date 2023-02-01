@@ -43,7 +43,7 @@ const Container = styled.dialog`
   border-color: var(--primary-text-color);
   padding: 15px;
   background: var(--dark-color);
-  color: var(--dark-text-color);
+  color: var(--light-color);
   &::backdrop {
     background: rgba(0, 0, 0, 0.7);
   }

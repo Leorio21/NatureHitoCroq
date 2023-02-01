@@ -1,6 +1,6 @@
 export interface EventInterface {
   id: number;
-  type: string;
+  title: string;
   startDate: string;
   endDate: string;
   info: string;

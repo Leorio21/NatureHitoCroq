@@ -69,7 +69,7 @@ const Slider = ({ events }: SliderProps): React.ReactElement => {
           <Title>
             {events[currentSlide].startDate +
               " - " +
-              events[currentSlide].type +
+              events[currentSlide].title +
               (events[currentSlide].location !== ""
                 ? " - ".concat(events[currentSlide].location)
                 : "")}

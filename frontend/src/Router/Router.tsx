@@ -37,6 +37,10 @@ const router = createBrowserRouter([
         path: "toys",
         element: <img src={construction} alt="Page en construction" />,
       },
+      {
+        path: "accessories",
+        element: <img src={construction} alt="Page en construction" />,
+      },
     ],
   },
   {

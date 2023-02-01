@@ -25,6 +25,9 @@ export default Test;
 
 const Container = styled.div`
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 `;

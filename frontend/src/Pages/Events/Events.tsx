@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import dayjs from "dayjs";
 import Card from "../../Components/Card/Card";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
@@ -19,7 +20,7 @@ const Events = (): React.ReactElement => {
     if (error !== "") {
       setModal(`Une erreur est survenue : ${error}`);
     }
-  }, []);
+  }, [response]);
   return (
     <>
       <Header />
@@ -30,13 +31,19 @@ const Events = (): React.ReactElement => {
           {response?.length === 0 ? (
             <Title level="h2" title="Aucun événements pour le moment" />
           ) : (
-            response?.map((event, index) => {
-              return (
-                <Card key={index}>
-                  <Event event={event} />
-                </Card>
-              );
-            })
+            response
+              ?.sort((a, b) =>
+                dayjs(a.startDate).toDate() > dayjs(b.startDate).toDate()
+                  ? 1
+                  : -1
+              )
+              .map((event, index) => {
+                return (
+                  <Card key={index}>
+                    <Event event={event} />
+                  </Card>
+                );
+              })
           )}
         </EventsContainer>
       </Container>
