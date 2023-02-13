@@ -3,14 +3,17 @@ import styled from "styled-components";
 
 interface FigureProps {
   illustration: string;
-  title: string;
+  title?: string;
 }
 
-const Figure = ({ illustration, title }: FigureProps): React.ReactElement => {
+const Figure = ({
+  illustration,
+  title = "",
+}: FigureProps): React.ReactElement => {
   return (
     <FigureContainer>
       <Img src={illustration} />
-      <Figcaption>{title}</Figcaption>
+      {title !== "" && <Figcaption>{title}</Figcaption>}
     </FigureContainer>
   );
 };
@@ -18,6 +21,7 @@ const Figure = ({ illustration, title }: FigureProps): React.ReactElement => {
 export default Figure;
 
 const FigureContainer = styled.figure`
+  position: relative;
   display: flex;
   flex-flow: column;
   width: 100%;
@@ -28,10 +32,14 @@ const FigureContainer = styled.figure`
 const Img = styled.img`
   height: 100%;
   width: auto;
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 const Figcaption = styled.figcaption`
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  white-space: break-spaces;
   text-align: center;
   background-color: #000000;
 `;

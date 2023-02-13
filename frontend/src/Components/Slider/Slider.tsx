@@ -55,7 +55,7 @@ const Slider = ({ events }: SliderProps): React.ReactElement => {
     <Container>
       {events.length === 0 ? (
         <>
-          <Title>Aucun évènements pour le moment</Title>
+          <Title>Aucun événements pour le moment</Title>
           <Img src="./hito.jpg" />
         </>
       ) : (

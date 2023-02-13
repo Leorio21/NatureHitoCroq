@@ -7,6 +7,7 @@ import Test from "../Pages/Test/Test";
 import Events from "../Pages/Events/Events";
 import Products from "../Pages/Products/Products";
 import construction from "../assets/construction.png";
+import Food from "../Pages/Products/Food";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "food",
-        element: <img src={construction} alt="Page en construction" />,
+        element: <Food />,
       },
       {
         path: "sweetmeat",

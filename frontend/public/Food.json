@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "brand": "Nature's Variety",
+    "type": "Food",
+    "category": "dog",
+    "name": "Selected Mini Saumon Norvégien",
+    "image": "../images/food/nv_chien_selected_mini_saumon.png",
+    "weigth": "1.5Kg",
+    "composition": "Saumon 450g\nPatate douce, pois chiches et pois 365g\ncarotte, pomme, brocoli, romarin et varech 150g"
+  },
+  {
+    "id": 2,
+    "brand": "Nature's Variety",
+    "type": "Food",
+    "category": "dog",
+    "name": "Selected Mini Saumon Norvégien",
+    "image": "../images/food/nv_chien_selected_mini_saumon.png",
+    "weigth": "7Kg",
+    "composition": "Saumon 2.1Kg\nPatate douce, pois chiches et pois 1.7Kg\ncarotte, pomme, brocoli, romarin et varech 700Kg"
+  },
+  {
+    "id": 3,
+    "brand": "Nature's Variety",
+    "type": "Food",
+    "category": "dog",
+    "name": "Selected Mini poulet élevé en plein air",
+    "image": "../images/food/nv_chien_selected_mini_poulet.png",
+    "weigth": "0.6Kg",
+    "composition": "Viande de poulet élevé en plein air désossée 180g\nPatate douce, pois chiches et pois 145g\nCarotte, pomme, brocoli, romarin et varech 60g"
+  },
+  {
+    "id": 4,
+    "brand": "Nature's Variety",
+    "type": "Food",
+    "category": "dog",
+    "name": "Selected Mini poulet élevé en plein air",
+    "image": "../images/food/nv_chien_selected_mini_poulet.png",
+    "weigth": "1.5Kg",
+    "composition": "Viande de poulet élevé en plein air désossée 450g\nPatate douce, pois chiches et pois 365g\nCarotte, pomme, brocoli, romarin et varech 150g"
+  },
+  {
+    "id": 5,
+    "brand": "Nature's Variety",
+    "type": "Food",
+    "category": "dog",
+    "name": "Selected Mini poulet élevé en plein air",
+    "image": "../images/food/nv_chien_selected_mini_poulet.png",
+    "weigth": "7Kg",
+    "composition": "Viande de poulet élevé en plein air désossée 2.1Kg\nPatate douce, pois chiches et pois 1.7Kg\nCarotte, pomme, brocoli, romarin et varech 700g"
+  },
+  {
+    "id": 6,
+    "brand": "Nature's Variety",
+    "type": "Food",
+    "category": "dog",
+    "name": "Selected Medium/Maxi Saumon Norvégien",
+    "image": "../images/food/nv_chien_selected_med_max_saumon.png",
+    "weigth": "2Kg",
+    "composition": "Saumon 600g\nPatate douce, pois chiches et pois 530g\ncarotte, pomme, brocoli, romarin et varech 200g"
+  },
+  {
+    "id": 7,
+    "brand": "Nature's Variety",
+    "type": "Food",
+    "category": "dog",
+    "name": "Selected Medium/Maxi Saumon Norvégien",
+    "image": "../images/food/nv_chien_selected_med_max_saumon.png",
+    "weigth": "10Kg",
+    "composition": "Saumon 3Kg\nPatate douce, pois chiches et pois 2.6Kg\ncarotte, pomme, brocoli, romarin et varech 1Kg"
+  },
+  {
+    "id": 8,
+    "brand": "Nature's Variety",
+    "type": "Food",
+    "category": "dog",
+    "name": "Selected Medium/Maxi poulet élevé en plein air",
+    "image": "../images/food/nv_chien_selected_med_max_poulet.png",
+    "weigth": "0.6Kg",
+    "composition": "Viande de poulet élevé en plein air désossée 180g\nPatate douce, pois chiches et pois 130g\nCarotte, pomme, brocoli, romarin et varech 60g"
+  },
+  {
+    "id": 9,
+    "brand": "Nature's Variety",
+    "type": "Food",
+    "category": "dog",
+    "name": "Selected Medium/Maxi poulet élevé en plein air",
+    "image": "../images/food/nv_chien_selected_med_max_poulet.png",
+    "weigth": "2Kg",
+    "composition": "Viande de poulet élevé en plein air désossée 600g\nPatate douce, pois chiches et pois 430g\nCarotte, pomme, brocoli, romarin et varech 200g"
+  },
+  {
+    "id": 10,
+    "brand": "Nature's Variety",
+    "type": "Food",
+    "category": "dog",
+    "name": "Selected Medium/Maxi poulet élevé en plein air",
+    "image": "../images/food/nv_chien_selected_med_max_poulet.png",
+    "weigth": "10Kg",
+    "composition": "Viande de poulet élevé en plein air désossée 3Kg\nPatate douce, pois chiches et pois 2.1Kg\nCarotte, pomme, brocoli, romarin et varech 1Kg"
+  }
+]

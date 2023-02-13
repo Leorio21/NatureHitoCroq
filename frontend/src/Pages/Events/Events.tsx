@@ -26,26 +26,22 @@ const Events = (): React.ReactElement => {
       <Header />
       <MainNavBar />
       <Container>
-        <EventsContainer>
-          {isLoading && "Chargement"}
-          {response?.length === 0 ? (
-            <Title level="h2" title="Aucun événements pour le moment" />
-          ) : (
-            response
-              ?.sort((a, b) =>
-                dayjs(a.startDate).toDate() > dayjs(b.startDate).toDate()
-                  ? 1
-                  : -1
-              )
-              .map((event, index) => {
-                return (
-                  <Card key={index}>
-                    <Event event={event} />
-                  </Card>
-                );
-              })
-          )}
-        </EventsContainer>
+        {isLoading && "Chargement"}
+        {response?.length === 0 ? (
+          <Title level="h2" title="Aucun événements pour le moment" />
+        ) : (
+          response
+            ?.sort((a, b) =>
+              dayjs(a.startDate).toDate() > dayjs(b.startDate).toDate() ? 1 : -1
+            )
+            .map((event, index) => {
+              return (
+                <Card key={index}>
+                  <Event event={event} />
+                </Card>
+              );
+            })
+        )}
       </Container>
       <Footer />
       <ModalContainer />
@@ -55,14 +51,10 @@ const Events = (): React.ReactElement => {
 
 export default Events;
 
-const Container = styled.div`
+const Container = styled.section`
   width: 100%;
   max-width: 1440px;
   height: 100%;
-`;
-
-const EventsContainer = styled.section`
-  width: 100%;
   padding: 10px;
   display: flex;
   justify-content: space-evenly;

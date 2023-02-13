@@ -24,7 +24,7 @@ const Modal = ({ modalContent, setModal }: ModalProps): React.ReactElement => {
     <Container ref={refDialog}>
       {modalContent}
       <CloseButton onClick={onCloseHandle}>
-        <XMarkIcon height={20} />
+        <XMarkIcon height={30} />
       </CloseButton>
     </Container>
   );
@@ -33,11 +33,9 @@ const Modal = ({ modalContent, setModal }: ModalProps): React.ReactElement => {
 export default Modal;
 
 const Container = styled.dialog`
-  position: absolute;
+  position: fixe;
   left: 50%;
   top: 50%;
-  width: 100%;
-  max-width: 450px;
   transform: translate(-50%, -50%);
   border-radius: 15px;
   border-color: var(--primary-text-color);
@@ -52,8 +50,8 @@ const Container = styled.dialog`
 const CloseButton = styled.p`
   position: absolute;
   cursor: pointer;
-  top: 0px;
-  right: 5px;
+  top: 5px;
+  right: 15px;
   width: 20px;
   height: 20px;
 `;
