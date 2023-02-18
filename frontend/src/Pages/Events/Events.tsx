@@ -2,9 +2,6 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import dayjs from "dayjs";
 import Card from "../../Components/Card/Card";
-import Footer from "../../Components/Footer/Footer";
-import Header from "../../Components/Header/Header";
-import MainNavBar from "../../Components/NavBar/MainNavBar";
 import Title from "../../Components/Title/Title";
 import { useFetch } from "../../Hooks/Fetch/useFetch";
 import { EventInterface } from "../../Interfaces/Interfaces";
@@ -23,8 +20,6 @@ const Events = (): React.ReactElement => {
   }, [response]);
   return (
     <>
-      <Header />
-      <MainNavBar />
       <Container>
         {isLoading && "Chargement"}
         {response?.length === 0 ? (
@@ -43,7 +38,6 @@ const Events = (): React.ReactElement => {
             })
         )}
       </Container>
-      <Footer />
       <ModalContainer />
     </>
   );

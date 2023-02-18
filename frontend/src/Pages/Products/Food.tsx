@@ -2,15 +2,15 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import Card from "../../Components/Card/Card";
 import Figure from "../../Components/Figure/Figure";
-import Product from "../../Components/Product/Product";
 import Title from "../../Components/Title/Title";
 import { useModal } from "../../Hooks/Modal/useModal";
 import { useFetch } from "../../Hooks/Fetch/useFetch";
-import { FoodInterface } from "../../Interfaces/Interfaces";
+import { ProductInterface } from "../../Interfaces/Interfaces";
+import { Link } from "react-router-dom";
 
 const Food = (): React.ReactElement => {
   const { response, error, isLoading } =
-    useFetch<FoodInterface[]>("../Food.json");
+    useFetch<ProductInterface[]>("../Food.json");
   const { setModal, ModalContainer } = useModal();
 
   useEffect(() => {
@@ -27,11 +27,14 @@ const Food = (): React.ReactElement => {
         ) : (
           response?.map((food, index) => {
             return (
-              <Card key={index} showOnClickElement={<Product product={food} />}>
-                <Figure
-                  illustration={food.image}
-                  title={`${food.name}\n${food.weigth}`}
-                />
+              <Card key={index} width={250}>
+                <Link to={"/details"} state={{ product: food }}>
+                  <Figure
+                    illustration={food.image}
+                    title={`${food.name} --- ${food.weigth}`}
+                    height={"200px"}
+                  />
+                </Link>
               </Card>
             );
           })

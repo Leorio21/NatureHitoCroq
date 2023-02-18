@@ -9,7 +9,7 @@ export interface EventInterface {
   Lien: string;
 }
 
-export interface FoodInterface {
+export interface ProductInterface {
   id: number;
   brand: string;
   type: string;
@@ -18,4 +18,8 @@ export interface FoodInterface {
   image: string;
   weigth: string;
   composition: string;
+}
+
+export interface ProductState extends Location {
+  product: ProductInterface;
 }

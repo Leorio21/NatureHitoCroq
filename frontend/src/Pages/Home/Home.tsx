@@ -3,9 +3,6 @@ import styled from "styled-components";
 import { devices } from "../../Styles/devices";
 import Slider from "../../Components/Slider/Slider";
 import boutique from "../../assets/boutique.jpg";
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
-import MainNavBar from "../../Components/NavBar/MainNavBar";
 import { useFetch } from "../../Hooks/Fetch/useFetch";
 import { useModal } from "../../Hooks/Modal/useModal";
 import { EventInterface } from "../../Interfaces/Interfaces";
@@ -23,8 +20,6 @@ const Home = (): React.ReactElement => {
 
   return (
     <>
-      <Header />
-      <MainNavBar />
       <Container>
         {isLoading && "Chargement"}
         {response !== undefined && (
@@ -50,7 +45,6 @@ const Home = (): React.ReactElement => {
           ></iframe>
         </LocalisationContainer>
       </Container>
-      <Footer />
       <ModalContainer />
     </>
   );
